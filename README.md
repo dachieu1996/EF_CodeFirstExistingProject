@@ -28,12 +28,12 @@ public class Category
 }
 </pre>
 
-###Add new line in Class adopts DbContext
+### Add new line in Class adopts DbContext
 <pre>
 public virtual DbSet<Category> Categories { get; set; }
 </pre>
 
-###Run Command
+### Run Command
 <pre>
 add-migration AddCategoriesTable
 </pre>
