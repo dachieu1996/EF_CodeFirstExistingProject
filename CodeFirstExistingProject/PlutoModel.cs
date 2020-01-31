@@ -13,7 +13,7 @@ namespace CodeFirstExistingProject
         }
 
         public virtual DbSet<Author> Authors { get; set; }
-        public virtual DbSet<Cours> Courses { get; set; }
+        public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<CourseSection> CourseSections { get; set; }
         public virtual DbSet<Post> Posts { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
@@ -26,19 +26,19 @@ namespace CodeFirstExistingProject
                 .Property(e => e.Name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Cours>()
+            modelBuilder.Entity<Course>()
                 .Property(e => e.Title)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Cours>()
+            modelBuilder.Entity<Course>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Cours>()
+            modelBuilder.Entity<Course>()
                 .Property(e => e.LevelString)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Cours>()
+            modelBuilder.Entity<Course>()
                 .HasMany(e => e.Tags)
                 .WithMany(e => e.Courses)
                 .Map(m => m.ToTable("CourseTags").MapLeftKey("CourseID").MapRightKey("TagID"));

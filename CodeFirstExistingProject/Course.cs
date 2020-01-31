@@ -7,10 +7,10 @@ namespace CodeFirstExistingProject
     using System.Data.Entity.Spatial;
 
     [Table("Courses")]
-    public partial class Cours
+    public partial class Course
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cours()
+        public Course()
         {
             CourseSections = new HashSet<CourseSection>();
             Tags = new HashSet<Tag>();
@@ -38,6 +38,8 @@ namespace CodeFirstExistingProject
         public byte Level { get; set; }
 
         public virtual Author Author { get; set; }
+
+        public Category Category { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CourseSection> CourseSections { get; set; }

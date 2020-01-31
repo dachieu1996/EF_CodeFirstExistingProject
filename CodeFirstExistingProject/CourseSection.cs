@@ -17,6 +17,6 @@ namespace CodeFirstExistingProject
         [StringLength(255)]
         public string Title { get; set; }
 
-        public virtual Cours Cours { get; set; }
+        public virtual Course Course { get; set; }
     }
 }
