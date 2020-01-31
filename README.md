@@ -38,6 +38,7 @@ public virtual DbSet<Category> Categories { get; set; }
 add-migration AddCategoriesTable
 </pre>
 > Note: You can use SQL function to execute raw sql query on AddCategoriesTable class
+
 > Example: Sql("INSERT INTO Categories VALUES ('Web Development')");
 <pre>
 update-database
