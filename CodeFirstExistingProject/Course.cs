@@ -39,8 +39,6 @@ namespace CodeFirstExistingProject
 
         public virtual Author Author { get; set; }
 
-        public Category Category { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CourseSection> CourseSections { get; set; }
 

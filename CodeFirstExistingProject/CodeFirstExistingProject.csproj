@@ -56,7 +56,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Author.cs" />
-    <Compile Include="Category.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="CourseSection.cs" />
     <Compile Include="Migrations\202001310442236_InitialModel.cs" />
@@ -70,6 +69,14 @@
     <Compile Include="Migrations\202001310520484_AddCategoryColumnToCoursesTable.cs" />
     <Compile Include="Migrations\202001310520484_AddCategoryColumnToCoursesTable.designer.cs">
       <DependentUpon>202001310520484_AddCategoryColumnToCoursesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001310547285_RemoveCategoryColumnFromCoursesTable.cs" />
+    <Compile Include="Migrations\202001310547285_RemoveCategoryColumnFromCoursesTable.designer.cs">
+      <DependentUpon>202001310547285_RemoveCategoryColumnFromCoursesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001310548519_RemoveCategoriesTable.cs" />
+    <Compile Include="Migrations\202001310548519_RemoveCategoriesTable.designer.cs">
+      <DependentUpon>202001310548519_RemoveCategoriesTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoModel.cs" />
@@ -92,6 +99,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001310520484_AddCategoryColumnToCoursesTable.resx">
       <DependentUpon>202001310520484_AddCategoryColumnToCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001310547285_RemoveCategoryColumnFromCoursesTable.resx">
+      <DependentUpon>202001310547285_RemoveCategoryColumnFromCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001310548519_RemoveCategoriesTable.resx">
+      <DependentUpon>202001310548519_RemoveCategoriesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
