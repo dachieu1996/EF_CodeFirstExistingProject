@@ -20,18 +20,18 @@ update-database
 </pre>
 
 ## Add new Model Class
-<pre>
+```csharp
 public class Category
 {
     public int Id { get; set; }
     public string Name { get; set; }
 }
-</pre>
+```
 
 ### Add new line in Class adopts DbContext
-<pre>
+```csharp
 public virtual DbSet<Category> Categories { get; set; }
-</pre>
+```
 
 ### Run Command
 <pre>
@@ -52,7 +52,7 @@ add-migration DeleteCategoriesTable
 
 ### Modify migration
 * Clone the table you want to delete to new table to preserve data
-<pre>
+```csharp
 public partial class DeleteCategoriesTable : DbMigration
 {
     public override void Up()
@@ -84,7 +84,7 @@ public partial class DeleteCategoriesTable : DbMigration
         DropTable("dbo._Categories");
     }
 }
-</pre>
+```
 
 ## Revert to previous migration
 <pre>
