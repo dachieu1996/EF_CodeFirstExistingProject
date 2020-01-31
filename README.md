@@ -85,3 +85,8 @@ public partial class DeleteCategoriesTable : DbMigration
     }
 }
 </pre>
+
+## Revert to previous migration
+<pre>
+update-database -TargetMigration:AddCategoryColumnToCoursesTable
+</pre>
